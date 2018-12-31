@@ -1,13 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {connect} from 'react-redux';
+import {testAction} from './actions/user';
 
-class App extends Component {
+class App extends React.Component {
+  componentDidMount() {
+    this.props.dispatch(testAction());
+  }
+
   render() {
     return (
       <div className="App">
-        just making sure this renders
+        just making sure this renders, {this.props.test}
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({test: state.user.user});
+
+export default connect(mapStateToProps)(App);
