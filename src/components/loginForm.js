@@ -10,8 +10,15 @@ class LoginForm extends React.Component {
     return this.props.dispatch(login(username, password));
   }
   render() {
+    let error;
+    if (this.props.error) error = (
+      <div className="form-error" aria-live="polite">
+        {this.props.error}
+      </div>
+    );
     return(
       <form className="login-form" onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
+      {error}
         <Field name="username" label="Username" type="text" component={Input} validate={[
           required, notEmpty
         ]} />

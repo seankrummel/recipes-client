@@ -5,7 +5,7 @@ import {clearAuthToken} from '../localStorage';
 
 class Header extends React.Component {
   logOut() {
-    this.props.dispatch(clearAuth);
+    this.props.dispatch(clearAuth());
     clearAuthToken();
   }
 
