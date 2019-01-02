@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import RegistrationForm from './components/registrationForm';
+import RegistrationPage from './components/registrationPage';
 
 class App extends React.Component {
   componentDidMount() {}
@@ -11,7 +11,8 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Route exact path="/"/>
-          <Route exact path="/register" component={RegistrationForm}/>
+          <Route exact path="/register" component={RegistrationPage}/>
+          <Route exact path="/dashboard"/>
         </div>
       </Router>
     );

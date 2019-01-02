@@ -1,7 +1,6 @@
 const initialState = {loading: false, err: null};
 
 export default (state=initialState, action) => {
-  console.log(state);
   switch (action.type) {
     case 'REGISTER_USER_REQUEST':
       return {loading: true, err: state.err};

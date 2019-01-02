@@ -16,7 +16,6 @@ export default class Input extends React.Component {
       warning = <div className="form-warning">{this.props.meta.warning}</div>;
     }
 
-    // console.log(this.props);
     return (
       <div className="form-input">
         <label htmlFor={this.props.input.name}>
