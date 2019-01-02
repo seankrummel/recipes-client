@@ -1,21 +1,23 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {testAction} from './actions/user';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import RegistrationForm from './components/registrationForm';
 
 class App extends React.Component {
-  componentDidMount() {
-    this.props.dispatch(testAction());
-  }
+  componentDidMount() {}
 
   render() {
     return (
-      <div className="App">
-        just making sure this renders, {this.props.test}
-      </div>
+      <Router>
+        <div className="App">
+          <Route exact path="/"/>
+          <Route exact path="/register" component={RegistrationForm}/>
+        </div>
+      </Router>
     );
   }
 }
 
-const mapStateToProps = state => ({test: state.user.user});
+const mapStateToProps = state => ({});
 
 export default connect(mapStateToProps)(App);
