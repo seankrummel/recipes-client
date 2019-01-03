@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Header from './components/header';
 import LandingPage from './components/landingPage';
 import RegistrationPage from './components/registrationPage';
+import Dashboard from './components/dashboard';
 import { refreshAuthToken } from './actions/auth';
 
 class App extends React.Component {
@@ -30,7 +31,7 @@ class App extends React.Component {
           <Header/>
           <Route exact path="/" component={LandingPage}/>
           <Route exact path="/register" component={RegistrationPage}/>
-          <Route exact path="/dashboard"/>
+          <Route exact path="/dashboard" component={Dashboard}/>
         </div>
       </Router>
     );

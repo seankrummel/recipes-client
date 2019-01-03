@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
         <Field name="password" label="Password" type="password" component={Input} validate={[
           required, notEmpty
         ]} />
-        <button type="submit" disabled={this.props.pristine || this.props.submitting}>Log In</button>
+        <button type="submit" >Log In</button>
       </form>
     );
   }
