@@ -1,7 +1,7 @@
 const initialState = {authToken: null, currentUser: null, loading: false, error: null};
 
 export default (state=initialState, action) => {
-  console.log(state);
+  // console.log(state);
   switch (action.type) {
     case 'SET_AUTH_TOKEN':
       return {...state, authToken: action.authToken};
