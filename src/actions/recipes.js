@@ -26,6 +26,9 @@ const getRecipeByIdError = err => ({
 export const unsetCurrentRecipe = () => ({
   type: 'UNSET_CURRENT_RECIPE'
 });
+export const startEditingRecipe = () => ({
+  type: 'START_EDITING_RECIPE'
+});
 
 export const getUserRecipes = () => (dispatch, getState) => {
   dispatch(getUserRecipesRequest());

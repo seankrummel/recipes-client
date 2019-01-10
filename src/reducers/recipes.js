@@ -1,4 +1,4 @@
-const initialState = {recipes: [], currentRecipe: null, loading: false, err: null};
+const initialState = {recipes: [], currentRecipe: null, editing: false, loading: false, err: null};
 
 export default (state=initialState, action) => {
   switch (action.type) {
@@ -16,6 +16,8 @@ export default (state=initialState, action) => {
       return {...state, loading: false, err: action.err};
     case 'UNSET_CURRENT_RECIPE':
       return {...state, currentRecipe: null};
+    case 'START_EDITING_RECIPE':
+      return {...state, editing: true};
     default:
       return state;
   }
