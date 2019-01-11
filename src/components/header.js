@@ -26,7 +26,7 @@ class Header extends React.Component {
   if (this.props.loggedIn) buttons = [
     <button onClick={() => this.logOut()} key="logOut">Log Out</button>,
     <button onClick={() => this.newRecipe()} key="newRecipe">New Recipe</button>,
-    <button onClick={() => this.newList()} key="newList">New List</button>
+    // <button onClick={() => this.newList()} key="newList">New List</button>
   ];
     return (
       <div className="header">

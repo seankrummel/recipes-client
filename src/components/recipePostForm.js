@@ -8,12 +8,14 @@ class RecipePostForm extends React.Component {
     const {title, ingredients, instructions} = values;
     let ingredientsArray = [];
     // ingredients = '{ingredient, quantity} {ingredient, quantity} {ingredient} etc'
-    ingredients.split('}').forEach((element) => {
-      // element = '{ingredient, quantity' => remove curly brace and split on comma
-      const ingredient = element.trim().slice(1).split(',')
-      if (ingredient[0] && ingredient[1]) ingredientsArray.push({ingredient: ingredient[0], quantity: ingredient[1]});
-    });
-    console.log('title:', title, 'ingredients:', ingredientsArray, 'instructions:', instructions);
+    if (ingredients) {
+      ingredients.split('}').forEach((element) => {
+        // element = '{ingredient, quantity' => remove curly brace and split on comma
+        const ingredient = element.trim().slice(1).split(',')
+        if (ingredient[0] && ingredient[1]) ingredientsArray.push({ingredient: ingredient[0], quantity: ingredient[1]});
+      });
+    }
+    // console.log('title:', title, 'ingredients:', ingredientsArray, 'instructions:', instructions);
     return this.props.dispatch(postRecipe(title, ingredientsArray, instructions));
   }
   goBack() {

@@ -26,6 +26,12 @@ export default (state=initialState, action) => {
       return {...state, editing: false, loading: false, err: null};
     case 'POST_RECIPE_ERROR':
       return {...state, loading: false, err: action.err};
+    case 'DELETE_RECIPE_REQUEST':
+      return {...state, loading: true};
+    case 'DELETE_RECIPE_SUCCESS':
+      return {...state, currentRecipe: null, loading: false, err: null};
+    case 'DELETE_RECIPE_ERROR':
+      return {...state, loading: false, err: action.err};
     default:
       return state;
   }

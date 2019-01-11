@@ -1,8 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {unsetCurrentRecipe} from '../actions/recipes';
+import {unsetCurrentRecipe, deleteRecipe} from '../actions/recipes';
 
 class RecipeById extends React.Component {
+  deleteRecipe(id) {
+    this.props.dispatch(deleteRecipe(id));
+  }
   goBack() {
     this.props.dispatch(unsetCurrentRecipe());
   }
@@ -22,6 +25,7 @@ class RecipeById extends React.Component {
           <h3>Instructions</h3>
           {this.props.recipe.instructions}
         </div>
+        <button onClick={() => this.deleteRecipe(this.props.recipe.id)}>Delete</button>
         <button onClick={() => this.goBack()}>Go Back</button>
         {/* this button could either take user to RecipesDisplay or to ListById */}
       </div>
