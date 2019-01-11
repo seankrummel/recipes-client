@@ -3,19 +3,19 @@ The app is deployed [Here](https://sean-fullstack-client.herokuapp.com/)
 
 ### Screenshots
 Landing Page
-(./images/LandingPage.png)
+[](./images/LandingPage.png)
 
 Registration Page
-(./images/RegistrationPage.png)
+[](./images/RegistrationPage.png)
 
 Dashboard
-(./images/Dashboard.png)
+[](./images/Dashboard.png)
 
 Recipe Details
-(./images/RecipeDetails.png)
+[](./images/RecipeDetails.png)
 
 Creating a new Recipe
-(./images/NewRecipeForm.png)
+[](./images/NewRecipeForm.png)
 
 ### Description
 This app is for creating, saving, and sharing recipes.
