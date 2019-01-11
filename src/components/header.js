@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../localStorage';
 import {unsetCurrentRecipe, startEditingRecipe} from '../actions/recipes';
@@ -17,7 +17,6 @@ class Header extends React.Component {
     this.props.dispatch(unsetCurrentRecipe()); // incase user clicks while on RecipeById component, so that they make a
     // new recipe instead of editing the one they're on
     this.props.dispatch(startEditingRecipe());
-    return <Redirect to="/dashboard" />
   }
   newList() {}
 
@@ -25,7 +24,7 @@ class Header extends React.Component {
     let buttons
   if (this.props.loggedIn) buttons = [
     <button onClick={() => this.logOut()} key="logOut">Log Out</button>,
-    <button onClick={() => this.newRecipe()} key="newRecipe">New Recipe</button>,
+    <Link to="/dashboard"><button onClick={() => this.newRecipe()} key="newRecipe">New Recipe</button></Link>,
     // <button onClick={() => this.newList()} key="newList">New List</button>
   ];
     return (
