@@ -18,6 +18,14 @@ export default (state=initialState, action) => {
       return {...state, currentRecipe: null};
     case 'START_EDITING_RECIPE':
       return {...state, editing: true};
+    case 'STOP_EDITING_RECIPE':
+      return {...state, editing: false};
+    case 'POST_RECIPE_REQUEST':
+      return {...state, loading: true};
+    case 'POST_RECIPE_SUCCESS':
+      return {...state, editing: false, loading: false, err: null};
+    case 'POST_RECIPE_ERROR':
+      return {...state, loading: false, err: action.err};
     default:
       return state;
   }
