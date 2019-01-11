@@ -1,68 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Deployed Version
+The app is deployed [Here](https://sean-fullstack-client.herokuapp.com/)
 
-## Available Scripts
+### Screenshots
+Landing Page
+(./images/LandingPage.png)
 
-In the project directory, you can run:
+Registration Page
+(./images/RegistrationPage.png)
 
-### `npm start`
+Dashboard
+(./images/Dashboard.png)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Recipe Details
+(./images/RecipeDetails.png)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Creating a new Recipe
+(./images/NewRecipeForm.png)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Description
+This app is for creating, saving, and sharing recipes.
+#### Tech Stack
+The backend for this app is using NodeJS with express.  Authentication is handled using JWTs with passport.
+The database is a mongo database, and it's hosted on [mLab](https://mlab.com/).
+The client is using React and Redux.
+The server and client are both hosted on [Heroku](https://www.heroku.com/).
+#### Code Base
+Components are located in src/components.  The root component (App.js) is just in src/.  Most components are accessed on the dashboard, which decides which components to render by checking various conditions on the store.
+All actions are located in src/actions.  And all Reducers are in src/reducers.  The root reducer (index.js) is what is exported to store.js, and it collects all other reducers into a single reducer.
+On the backend, the root is server.js.  All other code is stored in seperate directories with an index.js file that just imports everything relevant from other files in the directory and export them in one place.  
+The auth directory handles logins and refreshing jwts in the router, and the strategies defines the localStrategy and JWTStrategy.
+The users directory contains one route that handles registering a new user.  This directory also contains a mongoose model that defines what a user looks like in the database.  This also includes a validatePassword method and a hashPassword static function that uses bcryptjs.
+The recipes directory contains routes for CRUD operations on recipes and also contains a mongoose model defining recipes in the database.
+The recipeLists directory also contains routes for CRUD operations and a mongoose model.  These are for collections of recipes.
