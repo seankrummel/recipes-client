@@ -1,5 +1,6 @@
 ### Deployed Version
 The app is deployed [Here](https://sean-fullstack-client.herokuapp.com/)
+The server is in a seperate repo that can be found [Here](https://github.com/thinkful-ei26/sean-fullStack-server)
 
 ### Screenshots
 [Landing Page](./images/LandingPage.png)
