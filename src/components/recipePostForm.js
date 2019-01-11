@@ -1,6 +1,5 @@
 import React from 'react';
 import {Field, reduxForm, focus} from 'redux-form';
-import {connect} from 'react-redux';
 import Input from './input';
 import {stopEditingRecipe, postRecipe} from '../actions/recipes';
 

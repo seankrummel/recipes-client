@@ -9,7 +9,7 @@ function RegistrationPage(props) {
     <div className="registration-page">
       <h2>Register</h2>
       <RegistrationForm />
-      <Link to="/"><button>Login</button></Link>
+      <Link to="/"><button>Already have an account? Login</button></Link>
     </div>
   );
 }
