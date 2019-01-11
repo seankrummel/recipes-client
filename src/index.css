@@ -16,3 +16,31 @@ body {
 .landing-page, .registration-page, .dashboard {
   padding: 1em;
 }
+
+button {
+  border: 1px solid rgb(14, 0, 17);
+  border-radius: 3px;
+  color: rgb(14, 0, 17);
+  /* background: rgb(145, 0, 175); */
+}
+
+.header > button {
+  background: rgb(235, 200, 241);
+  float: right;
+  margin-left: 2px;
+}
+
+input {
+  display: block;
+  border: 1px solid rgb(14, 0, 17);
+  color: rgb(14, 0, 17);
+  margin-bottom: 1em;
+}
+
+textarea {
+  display: block;
+  border: 1px solid rgb(14, 0, 17);
+  color: rgb(14, 0, 17);
+  margin-bottom: 1em;
+  width: 40%;
+}
