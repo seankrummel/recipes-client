@@ -29,7 +29,7 @@ class Header extends React.Component {
   ];
     return (
       <div className="header">
-        Recipes App
+        Recipes
         {buttons}
       </div>
     );
