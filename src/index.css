@@ -2,15 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: rgb(235, 200, 241);
-  color: rgb(14, 0, 17);
+  background: rgb(241, 255, 240);
+  color: rgb(120, 128, 120);
 }
 
 .header {
   margin: 0;
   padding: .5em;
-  background: rgb(145, 0, 175);
-  color: rgb(235, 200, 241);
+  background: rgb(85, 128, 82);
+  color: rgb(241, 255, 240);
 }
 
 .landing-page, .registration-page, .dashboard {
@@ -18,29 +18,28 @@ body {
 }
 
 button {
-  border: 1px solid rgb(14, 0, 17);
+  border: 1px solid rgb(120, 128, 120);
   border-radius: 3px;
-  color: rgb(14, 0, 17);
-  /* background: rgb(145, 0, 175); */
+  color: rgb(120, 128, 120);
 }
 
 .header button {
-  background: rgb(235, 200, 241);
+  background: rgb(241, 255, 240);
   float: right;
   margin-left: 2px;
 }
 
 input {
   display: block;
-  border: 1px solid rgb(14, 0, 17);
-  color: rgb(14, 0, 17);
+  border: 1px solid rgb(120, 128, 120);
+  color: rgb(120, 128, 120);
   margin-bottom: 1em;
 }
 
 textarea {
   display: block;
-  border: 1px solid rgb(14, 0, 17);
-  color: rgb(14, 0, 17);
+  border: 1px solid rgb(120, 128, 120);
+  color: rgb(120, 128, 120);
   margin-bottom: 1em;
   width: 40%;
 }
