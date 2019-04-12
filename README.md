@@ -1,13 +1,14 @@
+# Recipes App
 ### Deployed Version
 The app is deployed [Here](https://sean-fullstack-client.herokuapp.com/)
 The server is in a seperate repo that can be found [Here](https://github.com/thinkful-ei26/sean-fullStack-server)
 
 ### Screenshots
-[Landing Page](./images/LandingPage.png)
-[Registration Page](./images/RegistrationPage.png)
-[Dashboard](./images/Dashboard.png)
-[Recipe Details](./images/RecipeDetails.png)
-[Creating a new Recipe](./images/NewRecipeForm.png)
+<img src="./images/LandingPage.png" width="500px"/>
+<img src="./images/RegistrationPage.png" width="500px"/>
+<img src="./images/Dashboard.png" width="500px"/>
+<img src="./images/RecipeDetails.png" width="500px"/>
+<img src="./images/NewRecipeForm.png" width="500px"/>
 
 ### Description
 This app is for creating, saving, and sharing recipes.
